@@ -17,13 +17,13 @@ body  {
         <div class="card card-container">
 		<h1><%= @headline %></h1>
         </div><!-- /card-container -->
-</div>
-
+		</div>
+    <div class="container">
     <div class="row">
 		<div class = "col-sm-4"></div>
 		<div class = "col-sm-4">
         <div class="card card-container">
-<h1> About Me</h1>
+		<h1> About Me</h1>
 		<p><%= @paragraph %></p>
 
 		<% @posts.each do |post| %>
@@ -31,7 +31,7 @@ body  {
 		    <p><%= post.body %></p>
 		<% end %>
         </div><!-- /card-container -->
-    </div><!-- /container -->
+    	</div><!-- /container -->
 
 	</body>
 </html>
