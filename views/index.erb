@@ -1,14 +1,37 @@
 <html>
 	<head>
-		<title><%= @title %></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" 		crossorigin="anonymous">
+		<title><%= @headline %></title>
+<style>
+body  {
+    background-image: url("https://vignette1.wikia.nocookie.net/disneycreate/images/f/fa/Pink-star-shimmer-pretty.gif/revision/latest?cb=20131102173354");
+    background-color: #cccccc;
+}
+</style>
 	</head>
 	<body>
+    <div class="container">
+    <div class="row">
+		<div class = "col-sm-4"></div>
+		<div class = "col-sm-4">
+        <div class="card card-container">
 		<h1><%= @headline %></h1>
+        </div><!-- /card-container -->
+</div>
+
+    <div class="row">
+		<div class = "col-sm-4"></div>
+		<div class = "col-sm-4">
+        <div class="card card-container">
+<h1> About Me</h1>
 		<p><%= @paragraph %></p>
 
 		<% @posts.each do |post| %>
 		    <h2><%= post.title %></h2>
 		    <p><%= post.body %></p>
 		<% end %>
+        </div><!-- /card-container -->
+    </div><!-- /container -->
+
 	</body>
 </html>
